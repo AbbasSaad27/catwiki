@@ -28,26 +28,32 @@ const getAllBreeds = catchAsync(async (req, res, next) => {
 });
 
 const searchBreeds = catchAsync(async (req, res, next) => {
-   const breed = await Breed.findOne({ name: req.params.name });
+   //query for breed and update the search count as well
+   const breed = await Breed.findOneAndUpdate(
+      { name: req.params.name },
+      {
+         $inc: { search_count: 1 },
+      }
+   );
    if (breed === null) {
       res.status(200).json({ status: 'success', message: 'No breed found' });
    } else {
-      const { _id } = breed;
-
-      //increament the search_count on breed document
-      const updatedBreed = await Breed.findOneAndUpdate(
-         { _id },
-         {
-            $inc: { search_count: 1 },
-         }
-      );
-
       res.status(202).json({
          status: 'success',
          message: 'successfully fetched your searched breed',
-         breed: updatedBreed,
+         breed,
       });
    }
 });
 
-module.exports = { getAllBreeds, searchBreeds };
+const topTenBreeds = catchAsync(async (req, res, next) => {
+   const breeds = await Breed.find({}).sort({ search_count: -1 }).limit(10);
+   res.status(202).json({
+      status: 'success',
+      message: 'successfully fetched top ten breed',
+      results: breeds.length,
+      breeds,
+   });
+});
+
+module.exports = { getAllBreeds, searchBreeds, topTenBreeds };
