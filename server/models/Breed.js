@@ -1,10 +1,12 @@
 //dependencies
 const mongoose = require('mongoose');
+const slugify = require('slugify').default;
 
 const breedsSchema = mongoose.Schema({
    weight: { imperial: String, metric: String },
    id: String,
    name: String,
+   slug: String,
    cfa_url: String,
    vetstreet_url: String,
    vcahospitals_url: String,
@@ -45,6 +47,11 @@ const breedsSchema = mongoose.Schema({
       height: Number,
       url: String,
    },
+});
+
+breedsSchema.pre('save', function (next) {
+   this.slug = slugify(this.name, { lower: true });
+   next();
 });
 
 const Breed = mongoose.model('Breed', breedsSchema);

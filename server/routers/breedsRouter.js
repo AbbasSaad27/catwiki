@@ -6,9 +6,11 @@ const { getAllBreeds, searchBreeds, topTenBreeds } = require('../controllers/bre
 //initialise router
 const router = express.Router();
 
+// router.get('/migrate', migrateBreeds); //!Disabled Route
+
 router.get('/', getAllBreeds);
 router.get('/top-ten-breeds/', topTenBreeds);
-router.get('/search/:name', searchBreeds);
+router.get('/:name', searchBreeds);
 
 //export the router
 module.exports = router;

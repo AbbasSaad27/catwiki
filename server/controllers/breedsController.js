@@ -30,7 +30,7 @@ const getAllBreeds = catchAsync(async (req, res, next) => {
 const searchBreeds = catchAsync(async (req, res, next) => {
    //query for breed and update the search count as well
    const breed = await Breed.findOneAndUpdate(
-      { name: req.params.name },
+      { slug: req.params.name },
       {
          $inc: { search_count: 1 },
       }
