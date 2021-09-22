@@ -6,6 +6,7 @@ const path = require('path');
 
 //internal imports
 const { notFoundHandler, defaultErrorHandler } = require('./middlewares/errorHandlers');
+const breedsRouter = require('./routers/breedsRouter');
 
 //initialise the app
 const app = express();
@@ -24,7 +25,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 //routers
-//app.use('/api/breeds/', breedsController); //TODO: Create breeds route and controller
+app.use('/api/breeds/', breedsRouter);
 
 app.get('/', (req, res, next) => {
    res.status(200).json({ status: 'success', message: `This is root of ${process.env.APP_NAME}` });
