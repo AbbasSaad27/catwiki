@@ -4,7 +4,7 @@ const axios = require('axios').default;
 const Breed = require('./../models/Breed');
 const catchAsync = require('../utils/catchAsync');
 
-const saveBreeds = catchAsync(async (req, res, next) => {
+const migrateBreeds = catchAsync(async (req, res, next) => {
    const response = await axios.get('https://api.thecatapi.com/v1/breeds', {
       headers: {
          'x-api-key': process.env.CAT_API_KEY,
@@ -15,7 +15,7 @@ const saveBreeds = catchAsync(async (req, res, next) => {
       const newBreed = new Breed({ ...breed });
       await newBreed.save();
    });
-   res.status(200).json({ status: 'success', message: 'All breeds saved successfully' });
+   res.status(200).json({ status: 'success', message: 'All breeds migrated successfully' });
 });
 
 const getAllBreeds = catchAsync(async (req, res, next) => {
@@ -28,8 +28,26 @@ const getAllBreeds = catchAsync(async (req, res, next) => {
 });
 
 const searchBreeds = catchAsync(async (req, res, next) => {
-   const breed = await Breed.findOne({ name: req.query.name });
-   res.status(200).json({ status: 'success', message: 'successfully fetched your searched breed', breed });
+   const breed = await Breed.findOne({ name: req.params.name });
+   if (breed === null) {
+      res.status(200).json({ status: 'success', message: 'No breed found' });
+   } else {
+      const { _id } = breed;
+
+      //increament the search_count on breed document
+      const updatedBreed = await Breed.findOneAndUpdate(
+         { _id },
+         {
+            $inc: { search_count: 1 },
+         }
+      );
+
+      res.status(202).json({
+         status: 'success',
+         message: 'successfully fetched your searched breed',
+         breed: updatedBreed,
+      });
+   }
 });
 
 module.exports = { getAllBreeds, searchBreeds };

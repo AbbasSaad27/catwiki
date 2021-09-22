@@ -7,7 +7,7 @@ const { getAllBreeds, searchBreeds } = require('../controllers/breedsController'
 const router = express.Router();
 
 router.get('/', getAllBreeds);
-router.get('/search', searchBreeds);
+router.get('/search/:name', searchBreeds);
 
 //export the router
 module.exports = router;

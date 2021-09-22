@@ -38,6 +38,7 @@ const breedsSchema = mongoose.Schema({
    wikipedia_url: String,
    hypoallergenic: Number,
    reference_image_id: String,
+   search_count: { type: Number, default: 0 },
    image: {
       id: String,
       width: Number,
