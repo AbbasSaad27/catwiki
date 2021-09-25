@@ -1,0 +1,44 @@
+.section-breeds_ov {
+  background-color: #e3e1dc;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  border-bottom-left-radius: 4rem;
+  border-bottom-right-radius: 4rem;
+}
+.breeds-ov_title {
+  font-size: 1.8rem;
+  color: #291507;
+  font-weight: 500;
+}
+.breeds-ov_title span {
+  position: relative;
+}
+.breeds-ov_title span::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 6rem;
+  height: 0.3rem;
+  background-color: #291507;
+}
+
+.breeds-ov_header {
+  margin-top: 2rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.breeds-ov_header-text {
+  font-size: 4.8rem;
+  width: 45%;
+  font-weight: 700;
+  color: #291507;
+}
+
+.see-more-link {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}

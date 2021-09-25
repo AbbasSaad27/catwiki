@@ -1,0 +1,34 @@
+.section-hero {
+  height: 80vh;
+  background-image: url("../../images/HeroImagelg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-top-right-radius: 4rem;
+  border-top-left-radius: 4rem;
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.hero-logo path {
+  fill: white;
+}
+.hero-logo {
+  transform: scale(2);
+  margin-left: 20%;
+  margin-bottom: 2rem;
+}
+.hero-content {
+  width: 30%;
+}
+.about-site {
+  font-size: 2.4rem;
+  color: white;
+}
+.input-search {
+  display: inline-block;
+  width: 80%;
+  height: 100%;
+  margin-left: 0.5rem;
+}
