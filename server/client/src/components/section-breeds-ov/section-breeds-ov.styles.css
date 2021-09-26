@@ -24,7 +24,7 @@
 }
 
 .breeds-ov_header {
-  margin-top: 2rem;
+  margin-top: 3rem;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -35,10 +35,30 @@
   width: 45%;
   font-weight: 700;
   color: #291507;
+  line-height: 5.8rem;
 }
 
 .see-more-link {
   font-size: 1.8rem;
   margin-bottom: 1rem;
   cursor: pointer;
+  font-weight: 700;
+  color: #291507;
+  opacity: 0.6;
+  transition: all 0.3s;
+  text-transform: uppercase;
+}
+.see-more-link:hover {
+  opacity: 1;
+}
+
+.popular-breeds_ov {
+  margin-top: 5rem;
+}
+
+.bar {
+  width: 4rem;
+  height: 17rem;
+  background-color: #dec68b;
+  border-radius: 2rem;
 }

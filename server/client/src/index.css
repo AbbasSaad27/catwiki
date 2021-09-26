@@ -13,6 +13,12 @@ body {
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
 }
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
 .section {
   padding: 0 8rem;
 }

@@ -1,0 +1,27 @@
+.section-footer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-right: 3rem;
+  border-top-left-radius: 4rem;
+  border-top-right-radius: 4rem;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-logo path {
+  fill: white;
+}
+.copyright-message {
+  font-size: 1.8rem;
+  color: #ffffff;
+  font-weight: 400;
+  /* opacity: 0.6; */
+}
+.team-name {
+  font-weight: 500;
+  opacity: 1;
+  text-decoration: underline;
+}
+.team-name:hover {
+  text-decoration: none;
+}
