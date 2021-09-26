@@ -12,7 +12,7 @@ mongoose
    .catch((error) => console.log(error));
 
 //configure the port
-const PORT = process.env.NODE_ENV || 5000;
+const PORT = process.env.PORT || 5000;
 
 //start the server
 app.listen(PORT, () => console.log(`App is alive on localhost:${PORT}`));

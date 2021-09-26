@@ -1,0 +1,3 @@
+GET ALL BREEDS = GET https://catwikimern.herokuapp.com/api/breeds/
+GET BREED BY NAME = GET https://catwikimern.herokuapp.com/api/breeds/{BREED_NAME}/
+GET TOP TEN BREEDS = GET https://catwikimern.herokuapp.com/api/breeds/top-ten-breeds/
