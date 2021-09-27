@@ -1,7 +1,7 @@
 .section-breeds_ov {
   background-color: #e3e1dc;
   padding-top: 2rem;
-  padding-bottom: 3rem;
+  padding-bottom: 5rem;
   border-bottom-left-radius: 4rem;
   border-bottom-right-radius: 4rem;
 }
@@ -54,11 +54,18 @@
 
 .popular-breeds_ov {
   margin-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
 }
 
 .bar {
   width: 4rem;
-  height: 17rem;
+  height: 13rem;
   background-color: #dec68b;
   border-radius: 2rem;
+  position: absolute;
+  top: 2rem;
+  left: -1rem;
 }

@@ -1,0 +1,19 @@
+.cat-image {
+  width: 22%;
+  height: 22rem;
+  overflow: hidden;
+  z-index: 1;
+}
+.imageOfCat {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 2rem;
+}
+
+.cat-name {
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #291507;
+  margin: 1.5rem 0;
+}
