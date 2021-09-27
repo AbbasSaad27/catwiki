@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Route, Switch } from "react-router-dom";
 import { connect } from "react-redux";
 
@@ -9,13 +9,18 @@ import Home from "./pages/home/home.page";
 import { ReactComponent as Logo } from "./images/CatwikiLogo.svg";
 import { setBreeds } from "./redux/breeds-reducer/breeds-actions";
 import { setTopBreeds } from "./redux/topBreeds-reducer/topBreeds-actions";
+import TopBreeds from "./pages/top-breeds/top-breeds.page";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      loader: false,
+    };
   }
 
   componentDidMount() {
+    this.setState({ loader: true });
     const allBreeds = axios.get(
       "https://catwikimern.herokuapp.com/api/breeds/"
     );
@@ -36,6 +41,7 @@ class App extends React.Component {
         <Logo />
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route path="/top-breeds" component={TopBreeds} />
         </Switch>
       </div>
     );
