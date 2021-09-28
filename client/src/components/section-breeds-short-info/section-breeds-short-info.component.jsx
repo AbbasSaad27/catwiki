@@ -7,8 +7,8 @@ import "./section-breeds-short-info.styles.css";
 const BreedsShortInfo = ({ topBreeds }) => {
   return (
     <section className="section-breeds-short-info">
-      {topBreeds.map((breed) => (
-        <ShortInfo breed={breed} />
+      {topBreeds.map((breed, i) => (
+        <ShortInfo breed={breed} key={breed.name} index={i} />
       ))}
     </section>
   );

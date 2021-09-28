@@ -59,13 +59,3 @@
   justify-content: space-between;
   position: relative;
 }
-
-.bar {
-  width: 4rem;
-  height: 14rem;
-  background-color: #dec68b;
-  border-radius: 2rem;
-  position: absolute;
-  top: 2rem;
-  left: -1rem;
-}

@@ -11,6 +11,9 @@
 .footer-logo path {
   fill: white;
 }
+.footer-logo {
+  width: 20%;
+}
 .copyright-message {
   font-size: 1.8rem;
   color: #ffffff;

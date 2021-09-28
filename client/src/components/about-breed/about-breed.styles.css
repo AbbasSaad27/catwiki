@@ -1,0 +1,14 @@
+.about-breed {
+  width: 80%;
+}
+.breed-name {
+  font-weight: 600;
+  font-size: 3.6rem;
+  color: #291507;
+  cursor: pointer;
+}
+.breed-short-desc {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  font-weight: 500;
+}

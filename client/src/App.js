@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 
 import axios from "axios";
@@ -38,7 +38,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Logo />
+        <Logo onClick={() => this.props.history.push("/")} />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/top-breeds" component={TopBreeds} />
@@ -55,4 +55,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect("", mapDispatchToProps)(App);
+export default connect("", mapDispatchToProps)(withRouter(App));

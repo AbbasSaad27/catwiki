@@ -1,0 +1,9 @@
+.bar {
+  width: 4rem;
+  height: 75%;
+  background-color: #dec68b;
+  border-radius: 2rem;
+  position: absolute;
+  top: 2rem;
+  left: -1rem;
+}
