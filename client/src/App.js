@@ -6,10 +6,11 @@ import axios from "axios";
 
 import "./App.css";
 import Home from "./pages/home/home.page";
-import { ReactComponent as Logo } from "./images/CatwikiLogo.svg";
+import Logo from "./components/logo/logo.component";
 import { setBreeds } from "./redux/breeds-reducer/breeds-actions";
 import { setTopBreeds } from "./redux/topBreeds-reducer/topBreeds-actions";
 import TopBreeds from "./pages/top-breeds/top-breeds.page";
+import BreedDetails from "./pages/breed-details/breed-details.pages";
 
 class App extends React.Component {
   constructor(props) {
@@ -38,10 +39,14 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Logo onClick={() => this.props.history.push("/")} />
+        <Logo
+          onClick={() => this.props.history.push("/")}
+          variant={"head-logo"}
+        />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/top-breeds" component={TopBreeds} />
+          <Route path="/breeds/:breedName" component={BreedDetails} />
         </Switch>
       </div>
     );

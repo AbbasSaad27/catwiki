@@ -14,7 +14,7 @@ const ShortInfo = ({
   return (
     <article className="breed-short-info">
       <CattoImage link={url} variant="popular-image" />
-      <AboutBreed name={name} index={index} description={description} />
+      <AboutBreed name={name} index={index} description={description} link />
     </article>
   );
 };

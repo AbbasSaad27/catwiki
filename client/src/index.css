@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: context-menu;
 }
 
 html {
@@ -21,4 +22,8 @@ a {
 
 .section {
   padding: 0 8rem;
+}
+
+.pointer {
+  cursor: pointer;
 }

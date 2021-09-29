@@ -1,5 +1,9 @@
 .breed-short-info {
+  position: relative;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+.inView {
+  position: absolute;
 }

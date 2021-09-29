@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Footer from "../../components/footer/footer.component";
 
 import BreedsShortInfo from "../../components/section-breeds-short-info/section-breeds-short-info.component";

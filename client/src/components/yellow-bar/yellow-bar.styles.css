@@ -1,9 +1,16 @@
 .bar {
   width: 4rem;
-  height: 75%;
+  height: 80%;
   background-color: #dec68b;
   border-radius: 2rem;
   position: absolute;
-  top: 2rem;
+  top: 14%;
   left: -1rem;
+  z-index: 0;
+}
+
+.for-big-image {
+  top: 7%;
+  height: 85%;
+  z-index: -1;
 }
