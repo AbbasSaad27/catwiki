@@ -38,10 +38,24 @@ const searchBreeds = catchAsync(async (req, res, next) => {
    if (breed === null) {
       res.status(200).json({ status: 'success', message: 'No breed found' });
    } else {
+      const breedInfos = await axios.get(`https://api.thecatapi.com/v1/images/search?breed_ids=${breed.id}&limit=8`, {
+         headers: {
+            'x-api-key': process.env.CAT_API_KEY,
+         },
+      });
+
+      const images = breedInfos.data.map((infos) => {
+         const { breeds, ...image } = infos;
+         return image;
+      });
+
       res.status(202).json({
          status: 'success',
          message: 'successfully fetched your searched breed',
-         breed,
+         data: {
+            breed,
+            images,
+         },
       });
    }
 });
