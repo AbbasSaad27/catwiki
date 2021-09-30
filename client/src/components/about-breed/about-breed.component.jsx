@@ -1,17 +1,18 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
+import { makeUrlParam } from "../../utils/functions/makeUrlParam";
 
 import "./about-breed.styles.css";
 
 const AboutBreed = ({ index, name, description, history, link, variant }) => {
-  const urlParam = link && name.toLowerCase().replaceAll(" ", "-");
+  const urlParam = link && makeUrlParam(name);
 
   const handleClick = () => {
     urlParam && history.push(`breeds/${urlParam}`);
   };
 
   return (
-    <div className={`about-breed ${variant && variant}`}>
+    <div className={`about-breed ${variant ? variant : ""}`}>
       <p
         className={`breed-name ${link ? "pointer" : ""}`}
         onClick={handleClick}

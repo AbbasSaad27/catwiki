@@ -2,11 +2,8 @@ import React, { useEffect, useState } from "react";
 
 import axios from "axios";
 
-import YellowBar from "../../components/yellow-bar/yellow-bar.component";
-import CattoImage from "../../components/catto-images/catto-images.component";
 import Footer from "../../components/footer/footer.component";
 import "./breed-details.styles.css";
-import BigCattoImage from "../../components/big-catto-image/big-catto-image.component";
 import SectionBreedDetails from "../../components/section-breed-details/section-breed-details.component";
 
 const BreedDetails = ({

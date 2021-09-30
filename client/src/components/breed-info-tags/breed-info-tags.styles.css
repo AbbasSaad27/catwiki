@@ -1,0 +1,17 @@
+.info-tags {
+  display: flex;
+  margin: 3rem 0;
+  align-items: center;
+}
+.tag-name {
+  font-weight: 700;
+}
+.tag-val {
+  font-weight: 500;
+}
+.level-val {
+  display: flex;
+}
+.just-sb {
+  justify-content: space-between;
+}

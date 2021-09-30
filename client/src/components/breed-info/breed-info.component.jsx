@@ -14,7 +14,7 @@ const BreedInfo = (props) => {
               .map((word) => `${word[0].toUpperCase()}${word.slice(1)}`)
               .join(" ")
           : `${key[0].toUpperCase()}${key.slice(1)}`;
-        return <BreedInfoTags name={modifiedKey} val={val} />;
+        return <BreedInfoTags key={key} name={modifiedKey} val={val} />;
       })}
     </div>
   );

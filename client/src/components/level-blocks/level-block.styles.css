@@ -1,0 +1,10 @@
+.level-block {
+  width: 6rem;
+  height: 1.2rem;
+  border-radius: 0.8rem;
+  background-color: #e0e0e0;
+  margin-left: 1rem;
+}
+.active {
+  background-color: #544439;
+}
