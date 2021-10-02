@@ -20,6 +20,7 @@ const breedsSchema = mongoose.Schema({
    lap: Number,
    alt_names: String,
    affection_level: Number,
+   adaptability: Number,
    child_friendly: Number,
    dog_friendly: Number,
    energy_level: Number,
@@ -41,12 +42,14 @@ const breedsSchema = mongoose.Schema({
    hypoallergenic: Number,
    reference_image_id: String,
    search_count: { type: Number, default: 0 },
-   image: {
-      id: String,
-      width: Number,
-      height: Number,
-      url: String,
-   },
+   images: [
+      {
+         id: String,
+         width: Number,
+         height: Number,
+         url: String,
+      },
+   ],
 });
 
 breedsSchema.pre('save', function (next) {
