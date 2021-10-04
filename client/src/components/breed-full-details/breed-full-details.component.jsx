@@ -11,6 +11,7 @@ const BreedFullDetails = ({ curBreed }) => {
     temperament,
     origin,
     life_span,
+    adaptability,
     affection_level,
     energy_level,
     child_friendly,
@@ -32,6 +33,7 @@ const BreedFullDetails = ({ curBreed }) => {
         temperament={temperament}
         origin={origin}
         life_span={life_span}
+        adaptability={adaptability}
         affection_level={affection_level}
         energy_level={energy_level}
         child_friendly={child_friendly}

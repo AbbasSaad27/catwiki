@@ -30,6 +30,7 @@ class App extends React.Component {
     );
     axios.all([allBreeds, topBreeds]).then(
       axios.spread((res1, res2) => {
+        console.log(res1, res2);
         this.props.setBreeds(res1.data.data.breeds);
         this.props.setTopBreeds(res2.data.breeds);
       })
