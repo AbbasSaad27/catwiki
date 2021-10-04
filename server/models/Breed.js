@@ -42,14 +42,12 @@ const breedsSchema = mongoose.Schema({
    hypoallergenic: Number,
    reference_image_id: String,
    search_count: { type: Number, default: 0 },
-   images: [
-      {
-         id: String,
-         width: Number,
-         height: Number,
-         url: String,
-      },
-   ],
+   image: {
+      id: String,
+      width: Number,
+      height: Number,
+      url: String,
+   },
 });
 
 breedsSchema.pre('save', function (next) {
