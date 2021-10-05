@@ -21,6 +21,11 @@
   font-size: 2.4rem;
   color: white;
 }
+
+.search {
+  position: relative;
+}
+
 .input-search {
   display: inline-block;
   width: 80%;

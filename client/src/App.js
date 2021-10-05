@@ -11,6 +11,10 @@ import { setBreeds } from "./redux/breeds-reducer/breeds-actions";
 import { setTopBreeds } from "./redux/topBreeds-reducer/topBreeds-actions";
 import TopBreeds from "./pages/top-breeds/top-breeds.page";
 import BreedDetails from "./pages/breed-details/breed-details.pages";
+import WithSpinner from "./components/with-spinner/with-spinner.component";
+
+const HomeWithSpinner = WithSpinner(Home);
+const TopBreedsWithSpinner = WithSpinner(TopBreeds);
 
 class App extends React.Component {
   constructor(props) {
@@ -30,9 +34,9 @@ class App extends React.Component {
     );
     axios.all([allBreeds, topBreeds]).then(
       axios.spread((res1, res2) => {
-        console.log(res1, res2);
         this.props.setBreeds(res1.data.data.breeds);
         this.props.setTopBreeds(res2.data.breeds);
+        this.setState({ loader: false });
       })
     );
   }
@@ -45,8 +49,19 @@ class App extends React.Component {
           variant={"head-logo"}
         />
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/top-breeds" component={TopBreeds} />
+          <Route
+            exact
+            path="/"
+            render={(props) => (
+              <HomeWithSpinner isLoading={this.state.loader} {...props} />
+            )}
+          />
+          <Route
+            path="/top-breeds"
+            render={(props) => (
+              <TopBreedsWithSpinner isLoading={this.state.loader} {...props} />
+            )}
+          />
           <Route path="/breeds/:breedName" component={BreedDetails} />
         </Switch>
       </div>

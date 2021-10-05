@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import { withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 import CattoImage from "../catto-images/catto-images.component";
 import YellowBar from "../yellow-bar/yellow-bar.component";
@@ -15,16 +15,12 @@ const SectionBreedsOv = ({ topBreeds, history }) => {
       </p>
       <div className="breeds-ov_header">
         <p className="breeds-ov_header-text">66+ Breeds for you to discover</p>
-        <p
-          className="see-more-link"
-          onClick={() => history.push("/top-breeds")}
-        >
+        <Link className="see-more-link" to="/top-breeds">
           See more →
-        </p>
+        </Link>
       </div>
       <div className="popular-breeds_ov">
         <YellowBar />
-        {console.log(topBreeds)}
         {topBreeds.slice(0, 4).map((breed) => (
           <CattoImage
             link={breed.image.url}

@@ -1,0 +1,12 @@
+.dropdown-option {
+  display: none;
+}
+.option-label {
+  font-size: 1.8rem;
+  padding: 1rem 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.option-label:hover {
+  background-color: #97979734;
+}
