@@ -8,9 +8,9 @@ const Footer = () => {
       <Logo variant="footer-logo" />
       <p className="copyright-message">
         © created by{" "}
-        <a href="#" className="team-name">
+        <a href="https://github.com/faiyaz032" className="team-name">
           Hopeless group
-        </a>{" "}
+        </a>
         - devChallenges.io 2021
       </p>
     </footer>

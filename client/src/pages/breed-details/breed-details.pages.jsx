@@ -2,10 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import axios from "axios";
 
-import Footer from "../../components/footer/footer.component";
 import "./breed-details.styles.css";
-import SectionBreedDetails from "../../components/section-breed-details/section-breed-details.component";
-import SectionOtherCattoImages from "../../components/section-other-catto-images/section-otherCattoImages.component";
 import WithSpinner from "../../components/with-spinner/with-spinner.component";
 import BreedDetailsPageContent from "./breed-details.pages.component";
 
@@ -25,7 +22,7 @@ const BreedDetails = ({
         setCurBreed(res.data.data);
         setLoader(false);
       });
-  }, []);
+  }, [breedName]);
   return (
     <main className="breed-details">
       <BreedDetailsContentWithSpinner isLoading={loader} curBreed={curBreed} />
