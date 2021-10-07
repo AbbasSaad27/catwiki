@@ -20,14 +20,26 @@ const SectionBreedsOv = ({ topBreeds, history }) => {
         </Link>
       </div>
       <div className="popular-breeds_ov">
-        <YellowBar />
-        {topBreeds.slice(0, 4).map((breed) => (
-          <CattoImage
-            link={breed.image.url}
-            catName={breed.name}
-            key={breed.name}
-          />
-        ))}
+        {topBreeds
+          .slice(0, 4)
+          .map((breed, i) =>
+            i === 0 ? (
+              <CattoImage
+                link={breed.image.url}
+                catName={breed.name}
+                key={breed.name}
+                variant="popular-breed-img"
+                incYB
+              />
+            ) : (
+              <CattoImage
+                link={breed.image.url}
+                catName={breed.name}
+                key={breed.name}
+                variant="popular-breed-img"
+              />
+            )
+          )}
       </div>
     </section>
   );

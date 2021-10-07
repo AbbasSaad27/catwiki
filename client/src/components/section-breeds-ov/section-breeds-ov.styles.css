@@ -28,6 +28,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .breeds-ov_header-text {
@@ -58,4 +59,20 @@
   flex-wrap: wrap;
   justify-content: space-between;
   position: relative;
+}
+
+@media only screen and (max-width: 980px) {
+  .breeds-ov_header-text {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 515px) {
+  .breeds-ov_header-text {
+    width: 100%;
+    padding-bottom: 2rem;
+  }
+  .popular-breeds_ov {
+    margin-top: 2rem;
+  }
 }

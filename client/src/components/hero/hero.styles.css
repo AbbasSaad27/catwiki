@@ -32,3 +32,28 @@
   height: 100%;
   margin-left: 0.5rem;
 }
+
+@media only screen and (max-width: 1066px) {
+  .hero-content {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .section-hero {
+    height: 70vh;
+    background-image: url("../../images/HeroImagemd.png");
+  }
+}
+@media only screen and (max-width: 376px) {
+  .hero-content {
+    width: 65%;
+  }
+  .hero-logo {
+    width: 80%;
+  }
+  .section-hero {
+    height: 50vh;
+    background-image: url("../../images/HeroImagesm.png");
+  }
+}

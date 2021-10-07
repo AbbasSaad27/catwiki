@@ -6,7 +6,7 @@
   position: absolute;
   top: 14%;
   left: -1rem;
-  z-index: 0;
+  z-index: -1;
 }
 
 .for-big-image {
