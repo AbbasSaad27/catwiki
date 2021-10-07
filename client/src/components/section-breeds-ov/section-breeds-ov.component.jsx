@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 import { Link, withRouter } from "react-router-dom";
 
 import CattoImage from "../catto-images/catto-images.component";
-import YellowBar from "../yellow-bar/yellow-bar.component";
 import "./section-breeds-ov.styles.css";
 
 const SectionBreedsOv = ({ topBreeds, history }) => {
