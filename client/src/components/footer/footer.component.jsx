@@ -10,7 +10,7 @@ const Footer = () => {
         © created by{" "}
         <a href="https://github.com/faiyaz032" className="team-name">
           Hopeless group
-        </a>
+        </a>{" "}
         - devChallenges.io 2021
       </p>
     </footer>
