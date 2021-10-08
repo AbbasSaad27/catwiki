@@ -18,3 +18,22 @@
   height: 27.8rem;
   margin: 0 0 3rem 0;
 }
+
+/* @media only screen and (max-width: 424px) {
+  .other-images-container {
+    width: 25rem;
+    height: 25rem;
+  }
+} */
+
+@media only screen and (max-width: 450px) {
+  .other-images-img {
+    width: 25rem;
+    height: 25rem;
+  }
+}
+@media only screen and (max-width: 302px) {
+  .other-images {
+    justify-content: center;
+  }
+}

@@ -1,12 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import { Link, withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import CattoImage from "../catto-images/catto-images.component";
 import "./section-breeds-ov.styles.css";
 
-const SectionBreedsOv = ({ topBreeds, history }) => {
+const SectionBreedsOv = ({ topBreeds }) => {
   return (
     <section className="section section-breeds_ov">
       <p className="breeds-ov_title">
@@ -50,4 +50,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(withRouter(SectionBreedsOv));
+export default connect(mapStateToProps)(SectionBreedsOv);
